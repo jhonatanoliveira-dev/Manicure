@@ -37,6 +37,7 @@
     }
   </script>
   <style>
+    img { background: linear-gradient(135deg,#F3E8FF,#E9D5FF); }
     :root { color-scheme: light; }
     html { scroll-behavior: smooth; }
     body { font-family: Inter, sans-serif; background:#FAF8FC; color:#30243A; }
@@ -241,6 +242,21 @@
   </a>
 
   <script>
+
+    // Evita áreas vazias caso algum servidor de fotos não carregue.
+    document.querySelectorAll('img').forEach(img => {
+      img.addEventListener('error', function handleImageError() {
+        if (this.dataset.fallbackTried) {
+          this.src = 'data:image/svg+xml;charset=UTF-8,' + encodeURIComponent(
+            '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 1100"><defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#F3E8FF"/><stop offset="1" stop-color="#D8B4FE"/></linearGradient></defs><rect width="900" height="1100" fill="url(#g)"/><g fill="none" stroke="#7E22CE" stroke-width="12" opacity=".65"><rect x="345" y="350" width="210" height="330" rx="105"/><path d="M450 390v250M370 515h160"/></g><text x="450" y="790" text-anchor="middle" font-family="Arial,sans-serif" font-size="34" fill="#5B287A">Studio Isabella Martins</text><text x="450" y="845" text-anchor="middle" font-family="Arial,sans-serif" font-size="25" fill="#7E22CE">Beleza em cada detalhe</text></svg>'
+          );
+          return;
+        }
+        this.dataset.fallbackTried = 'true';
+        this.src = 'https://images.pexels.com/photos/3997389/pexels-photo-3997389.jpeg?auto=compress&cs=tinysrgb&w=1200';
+      });
+    });
+
     const menuToggle = document.getElementById('menu-toggle');
     const mobileMenu = document.getElementById('mobile-menu');
     const menuIcon = document.getElementById('menu-icon');
