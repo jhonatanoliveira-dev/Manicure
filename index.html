@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#FAF8FC">
+  <meta name="description" content="Studio Isabella Martins. Manicure, esmaltação em gel, blindagem e nail art com atendimento cuidadoso e hora marcada.">
+  <title>Studio Isabella Martins | Nail Designer & Cuidados</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            ink: '#30243A',
+            muted: '#81768B',
+            paper: '#FAF8FC',
+            lilac: '#F3E8FF',
+            lavender: '#E9D5FF',
+            violet: '#9333EA',
+            plum: '#7E22CE',
+            champagne: '#C8B6D9'
+          },
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+            display: ['Plus Jakarta Sans', 'sans-serif']
+          },
+          boxShadow: {
+            soft: '0 18px 55px rgba(73, 45, 94, .09)',
+            card: '0 12px 35px rgba(73, 45, 94, .07)'
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    :root { color-scheme: light; }
+    html { scroll-behavior: smooth; }
+    body { font-family: Inter, sans-serif; background:#FAF8FC; color:#30243A; }
+    h1,h2,h3,.display { font-family:'Plus Jakarta Sans',sans-serif; }
+    .hero-bg { background:radial-gradient(circle at 82% 20%,rgba(233,213,255,.7),transparent 32%),linear-gradient(135deg,#FAF8FC 0%,#F7F0FC 100%); }
+    .eyebrow { letter-spacing:.17em; text-transform:uppercase; }
+    .glass { background:rgba(255,255,255,.78); backdrop-filter:blur(16px); border:1px solid rgba(255,255,255,.9); }
+    .btn { transition:transform .25s ease,box-shadow .25s ease,background .25s ease; }
+    .btn:hover { transform:translateY(-2px); box-shadow:0 14px 28px rgba(126,34,206,.2); }
+    .nav-link { position:relative; }
+    .nav-link:after { content:''; position:absolute; left:0; bottom:-7px; width:0; height:1px; background:#9333EA; transition:width .25s ease; }
+    .nav-link:hover:after { width:100%; }
+    .reveal { opacity:0; transform:translateY(20px); transition:opacity .7s ease,transform .7s ease; }
+    .reveal.visible { opacity:1; transform:translateY(0); }
+    .faq-panel { max-height:0; overflow:hidden; transition:max-height .35s ease; }
+    .faq-item[aria-expanded="true"] .faq-panel { max-height:240px; }
+    .faq-item[aria-expanded="true"] .faq-plus { transform:rotate(45deg); }
+    .faq-plus { transition:transform .25s ease; }
+    .gallery-img { transition:transform .5s ease; }
+    .gallery-card:hover .gallery-img { transform:scale(1.045); }
+    @media (prefers-reduced-motion:reduce) {
+      *,*:before,*:after { scroll-behavior:auto!important; transition-duration:.01ms!important; animation-duration:.01ms!important; }
+      .reveal { opacity:1; transform:none; }
+    }
+  </style>
+</head>
+<body class="antialiased">
+  <header class="fixed inset-x-0 top-0 z-50 border-b border-purple-100/80 bg-white/85 backdrop-blur-xl">
+    <div class="mx-auto flex max-w-7xl items-center justify-between gap-4 px-5 py-3.5 lg:px-8">
+      <a href="#inicio" class="flex items-center gap-3" aria-label="Studio Isabella Martins, início">
+        <span class="grid h-11 w-11 place-items-center rounded-full border border-purple-200 bg-lilac font-display text-xl font-bold text-plum">I<span class="text-violet">.</span></span>
+        <span class="leading-tight">
+          <span class="block font-display text-sm font-extrabold tracking-tight text-ink sm:text-base">Studio Isabella Martins</span>
+          <span class="mt-0.5 block text-[9px] font-semibold uppercase tracking-[.19em] text-muted">Nail Designer & Cuidados</span>
+        </span>
+      </a>
+      <nav class="hidden items-center gap-7 md:flex" aria-label="Navegação principal">
+        <a class="nav-link text-sm text-muted hover:text-plum" href="#servicos">Serviços</a>
+        <a class="nav-link text-sm text-muted hover:text-plum" href="#galeria">Galeria</a>
+        <a class="nav-link text-sm text-muted hover:text-plum" href="#avaliacoes">Avaliações</a>
+        <a class="nav-link text-sm text-muted hover:text-plum" href="#faq">FAQ</a>
+      </nav>
+      <a href="https://wa.me/5511999999999?text=Ol%C3%A1%2C%20Isabella!%20Gostaria%20de%20agendar%20um%20hor%C3%A1rio." target="_blank" rel="noopener noreferrer" class="btn hidden items-center gap-2 rounded-full bg-violet px-5 py-3 text-xs font-bold text-white shadow-lg shadow-violet/15 md:inline-flex">
+        <svg viewBox="0 0 24 24" class="h-4 w-4" fill="currentColor" aria-hidden="true"><path d="M20.5 3.5A11.8 11.8 0 0 0 12.1 0C5.6 0 .3 5.3.3 11.8c0 2.1.6 4.1 1.6 5.9L.2 24l6.5-1.7a11.8 11.8 0 0 0 5.4 1.3h.1c6.5 0 11.8-5.3 11.8-11.8 0-3.1-1.2-6.1-3.5-8.3ZM12.2 21.6a9.8 9.8 0 0 1-5-1.4l-.4-.2-3.9 1 1-3.8-.3-.4a9.7 9.7 0 1 1 8.6 4.8Zm5.3-7.3c-.3-.2-1.8-.9-2.1-1-.3-.1-.5-.2-.7.2-.2.3-.8 1-1 1.2-.2.2-.4.2-.7.1-.3-.2-1.3-.5-2.5-1.6-.9-.8-1.6-1.8-1.8-2.1-.2-.3 0-.5.1-.6l.5-.6c.2-.2.2-.3.3-.5.1-.2 0-.4 0-.6-.1-.2-.7-1.7-.9-2.3-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.6.1-.9.4-.3.3-1.1 1.1-1.1 2.6s1.1 3 1.2 3.2c.2.2 2.2 3.4 5.4 4.8.8.4 1.4.6 1.9.7.8.3 1.5.2 2 .1.6-.1 1.8-.7 2.1-1.4.3-.7.3-1.3.2-1.4-.1-.1-.3-.2-.6-.4Z"/></svg>
+        Agendar horário
+      </a>
+      <button id="menu-toggle" class="grid h-11 w-11 place-items-center rounded-full border border-purple-100 text-ink md:hidden" aria-label="Abrir menu" aria-expanded="false" aria-controls="mobile-menu">
+        <svg id="menu-icon" viewBox="0 0 24 24" class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="1.7"><path stroke-linecap="round" d="M4 7h16M4 12h16M4 17h16"/></svg>
+      </button>
+    </div>
+    <nav id="mobile-menu" class="hidden border-t border-purple-100 bg-white px-5 py-5 md:hidden" aria-label="Navegação móvel">
+      <div class="flex flex-col gap-5 text-sm">
+        <a href="#servicos" class="mobile-link">Serviços</a><a href="#galeria" class="mobile-link">Galeria</a><a href="#avaliacoes" class="mobile-link">Avaliações</a><a href="#faq" class="mobile-link">FAQ</a>
+        <a href="https://wa.me/5511999999999?text=Ol%C3%A1%2C%20Isabella!%20Gostaria%20de%20agendar%20um%20hor%C3%A1rio." target="_blank" rel="noopener noreferrer" class="rounded-full bg-violet px-5 py-3 text-center font-bold text-white">Agendar pelo WhatsApp</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section id="inicio" class="hero-bg relative overflow-hidden pb-20 pt-32 md:pb-28 md:pt-40">
+      <div class="pointer-events-none absolute -right-24 top-32 h-96 w-96 rounded-full border border-purple-200/70"></div>
+      <div class="pointer-events-none absolute -right-10 top-48 h-72 w-72 rounded-full border border-champagne/50"></div>
+      <div class="mx-auto grid max-w-7xl items-center gap-14 px-5 lg:grid-cols-[1.02fr_.98fr] lg:gap-20 lg:px-8">
+        <div class="relative z-10 reveal">
+          <span class="inline-flex items-center gap-2 rounded-full border border-purple-200 bg-lilac px-4 py-2 text-[9px] font-extrabold text-plum"><span class="text-sm">✦</span> Especialista em Esmaltação em Gel & Blindagem</span>
+          <h1 class="mt-7 max-w-2xl font-display text-4xl font-extrabold leading-[1.12] tracking-[-.055em] text-ink sm:text-5xl lg:text-[3.65rem]">Suas unhas perfeitas, elegantes e <span class="text-violet">impecáveis</span> por muito mais tempo.</h1>
+          <p class="mt-6 max-w-xl text-base leading-8 text-muted">Unhas impecáveis, duradouras e cheias de estilo para realçar sua autoestima. Atendimento com hora marcada, cuidado em cada detalhe e materiais selecionados para uma experiência especial.</p>
+          <div class="mt-9 flex flex-col gap-3 sm:flex-row">
+            <a href="https://wa.me/5511999999999?text=Ol%C3%A1%2C%20Isabella!%20Gostaria%20de%20agendar%20meu%20hor%C3%A1rio%20no%20Studio." target="_blank" rel="noopener noreferrer" class="btn inline-flex items-center justify-center gap-3 rounded-full bg-violet px-7 py-4 text-sm font-bold text-white shadow-xl shadow-violet/20">📅 Agendar Meu Horário no WhatsApp <span aria-hidden="true">↗</span></a>
+            <a href="#servicos" class="btn inline-flex items-center justify-center rounded-full border border-purple-200 bg-white/70 px-7 py-4 text-sm font-bold text-plum hover:bg-white">Conhecer os serviços</a>
+          </div>
+          <div class="mt-10 flex flex-wrap items-center gap-x-7 gap-y-4 border-t border-purple-200/80 pt-7">
+            <div><p class="font-display text-lg font-extrabold text-ink">Hora marcada</p><p class="mt-1 text-[10px] uppercase tracking-[.14em] text-muted">Mais tranquilidade</p></div>
+            <div class="h-9 w-px bg-purple-200"></div>
+            <div><p class="font-display text-lg font-extrabold text-ink">Higiene cuidadosa</p><p class="mt-1 text-[10px] uppercase tracking-[.14em] text-muted">Segurança em primeiro lugar</p></div>
+            <div class="h-9 w-px bg-purple-200"></div>
+            <div><p class="font-display text-lg font-extrabold text-ink">Seu estilo</p><p class="mt-1 text-[10px] uppercase tracking-[.14em] text-muted">Detalhes personalizados</p></div>
+          </div>
+        </div>
+        <div class="relative mx-auto w-full max-w-[540px] reveal">
+          <div class="absolute -inset-4 rounded-[2rem] border border-purple-200"></div>
+          <div class="relative overflow-hidden rounded-[1.7rem] bg-purple-100 shadow-soft">
+            <img src="https://images.unsplash.com/photo-1632345031435-877ff6c92e3b?q=80&w=1100&auto=format&fit=crop" alt="Unhas bem cuidadas com esmaltação delicada" class="h-[440px] w-full object-cover object-center sm:h-[560px]" fetchpriority="high">
+            <div class="absolute inset-0 bg-gradient-to-t from-[#2d163b]/35 via-transparent to-transparent"></div>
+            <div class="glass absolute bottom-5 left-5 right-5 rounded-2xl p-5 sm:bottom-7 sm:left-7 sm:right-7">
+              <p class="eyebrow text-[9px] font-extrabold text-plum">Studio Isabella Martins</p>
+              <p class="mt-2 font-display text-xl font-bold tracking-tight text-ink">Beleza nos detalhes. Cuidado em cada toque.</p>
+            </div>
+          </div>
+          <div class="absolute -left-6 top-12 hidden rounded-2xl border border-white bg-white/95 p-4 shadow-card sm:block"><span class="font-display text-2xl font-extrabold text-violet">♡</span><p class="mt-1 text-[9px] font-bold uppercase tracking-widest text-muted">Feito com carinho</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="border-y border-purple-100 bg-white py-6">
+      <div class="mx-auto flex max-w-6xl flex-col items-center justify-center gap-3 px-5 text-center sm:flex-row sm:gap-9">
+        <span class="eyebrow text-[9px] font-extrabold text-muted">Seu momento de cuidado</span><span class="hidden h-5 w-px bg-purple-100 sm:block"></span>
+        <div class="flex flex-wrap justify-center gap-x-7 gap-y-2 text-xs font-semibold text-muted"><span>Beleza</span><span class="text-champagne">✦</span><span>Higiene</span><span class="text-champagne">✦</span><span>Durabilidade</span><span class="text-champagne">✦</span><span>Estilo</span></div>
+      </div>
+    </section>
+
+    <section id="servicos" class="py-24 md:py-28">
+      <div class="mx-auto max-w-7xl px-5 lg:px-8">
+        <div class="mx-auto max-w-2xl text-center reveal"><p class="eyebrow text-[10px] font-extrabold text-violet">Serviços & cuidados</p><h2 class="mt-4 font-display text-3xl font-extrabold leading-tight tracking-tight text-ink sm:text-4xl">Um cuidado especial para <span class="text-violet">cada estilo.</span></h2><p class="mt-5 text-sm leading-7 text-muted">Escolha seu próximo momento de beleza. Toque no serviço para consultar disponibilidade e valores pelo WhatsApp.</p></div>
+        <div class="mt-14 grid gap-5 sm:grid-cols-2 xl:grid-cols-4">
+          <article class="reveal rounded-3xl border border-purple-100 bg-white p-7 shadow-card transition hover:-translate-y-1 hover:border-purple-300">
+            <div class="grid h-12 w-12 place-items-center rounded-2xl bg-lilac text-2xl">♡</div><p class="mt-7 text-[10px] font-extrabold uppercase tracking-[.16em] text-violet">01 · Essencial</p><h3 class="mt-3 font-display text-xl font-bold tracking-tight">Manicure Clássica & Cuticulagem</h3><p class="mt-3 min-h-[84px] text-sm leading-7 text-muted">Cuidado completo, cutículas cuidadas e acabamento caprichado para mãos sempre bonitas.</p>
+            <a href="https://wa.me/5511999999999?text=Ol%C3%A1%2C%20Isabella!%20Tenho%20interesse%20em%20Manicure%20Cl%C3%A1ssica%20%26%20Cuticulagem.%20Pode%20me%20passar%20os%20valores%20e%20hor%C3%A1rios%3F" target="_blank" rel="noopener noreferrer" class="btn mt-6 inline-flex w-full items-center justify-center rounded-full border border-purple-200 bg-lilac px-4 py-3 text-xs font-extrabold text-plum hover:bg-lavender">Quero este serviço ↗</a>
+          </article>
+          <article class="reveal rounded-3xl border border-purple-100 bg-white p-7 shadow-card transition hover:-translate-y-1 hover:border-purple-300">
+            <div class="grid h-12 w-12 place-items-center rounded-2xl bg-lilac text-2xl">✧</div><p class="mt-7 text-[10px] font-extrabold uppercase tracking-[.16em] text-violet">02 · Brilho</p><h3 class="mt-3 font-display text-xl font-bold tracking-tight">Esmaltação em Gel</h3><p class="mt-3 min-h-[84px] text-sm leading-7 text-muted">Brilho intenso e acabamento uniforme, com durabilidade que pode chegar a 21 dias conforme cuidados e crescimento das unhas.</p>
+            <a href="https://wa.me/5511999999999?text=Ol%C3%A1%2C%20Isabella!%20Tenho%20interesse%20em%20Esmalta%C3%A7%C3%A3o%20em%20Gel.%20Pode%20me%20passar%20os%20valores%20e%20hor%C3%A1rios%3F" target="_blank" rel="noopener noreferrer" class="btn mt-6 inline-flex w-full items-center justify-center rounded-full border border-purple-200 bg-lilac px-4 py-3 text-xs font-extrabold text-plum hover:bg-lavender">Quero este serviço ↗</a>
+          </article>
+          <article class="reveal rounded-3xl border border-purple-100 bg-white p-7 shadow-card transition hover:-translate-y-1 hover:border-purple-300">
+            <div class="grid h-12 w-12 place-items-center rounded-2xl bg-lilac text-2xl">◇</div><p class="mt-7 text-[10px] font-extrabold uppercase tracking-[.16em] text-violet">03 · Proteção</p><h3 class="mt-3 font-display text-xl font-bold tracking-tight">Blindagem / Banho de Gel</h3><p class="mt-3 min-h-[84px] text-sm leading-7 text-muted">Uma camada de proteção e resistência para ajudar a preservar unhas naturais mais frágeis.</p>
+            <a href="https://wa.me/5511999999999?text=Ol%C3%A1%2C%20Isabella!%20Tenho%20interesse%20em%20Blindagem%20%2F%20Banho%20de%20Gel.%20Pode%20me%20passar%20os%20valores%20e%20hor%C3%A1rios%3F" target="_blank" rel="noopener noreferrer" class="btn mt-6 inline-flex w-full items-center justify-center rounded-full border border-purple-200 bg-lilac px-4 py-3 text-xs font-extrabold text-plum hover:bg-lavender">Quero este serviço ↗</a>
+          </article>
+          <article class="reveal rounded-3xl border border-purple-100 bg-white p-7 shadow-card transition hover:-translate-y-1 hover:border-purple-300">
+            <div class="grid h-12 w-12 place-items-center rounded-2xl bg-lilac text-2xl">✿</div><p class="mt-7 text-[10px] font-extrabold uppercase tracking-[.16em] text-violet">04 · Arte</p><h3 class="mt-3 font-display text-xl font-bold tracking-tight">Nail Art / Alongamento</h3><p class="mt-3 min-h-[84px] text-sm leading-7 text-muted">Decorações delicadas, francesinha e opções de alongamento em fibra ou acrigel para expressar seu estilo.</p>
+            <a href="https://wa.me/5511999999999?text=Ol%C3%A1%2C%20Isabella!%20Tenho%20interesse%20em%20Nail%20Art%20%2F%20Alongamento.%20Pode%20me%20passar%20os%20valores%20e%20hor%C3%A1rios%3F" target="_blank" rel="noopener noreferrer" class="btn mt-6 inline-flex w-full items-center justify-center rounded-full border border-purple-200 bg-lilac px-4 py-3 text-xs font-extrabold text-plum hover:bg-lavender">Quero este serviço ↗</a>
+          </article>
+        </div>
+        <p class="mt-7 text-center text-xs text-muted">Valores e duração variam conforme a técnica e a necessidade de cada cliente. Consulte pelo WhatsApp.</p>
+      </div>
+    </section>
+
+    <section id="galeria" class="bg-[#F4EDF9] py-24 md:py-28">
+      <div class="mx-auto max-w-7xl px-5 lg:px-8">
+        <div class="mx-auto max-w-2xl text-center reveal"><p class="eyebrow text-[10px] font-extrabold text-violet">Inspiração & detalhes</p><h2 class="mt-4 font-display text-3xl font-extrabold tracking-tight text-ink sm:text-4xl">Um pouco de beleza em <span class="text-violet">cada detalhe.</span></h2><p class="mt-5 text-sm leading-7 text-muted">Inspire-se em acabamentos delicados, brilho elegante e nail arts para diferentes ocasiões.</p></div>
+        <div class="mt-12 grid grid-cols-2 gap-3 sm:grid-cols-3 sm:gap-5">
+          <figure class="gallery-card reveal overflow-hidden rounded-2xl bg-white shadow-card"><img class="gallery-img aspect-[4/5] w-full object-cover" src="https://images.unsplash.com/photo-1632345031435-877ff6c92e3b?q=80&w=800&auto=format&fit=crop" alt="Unhas elegantes com esmaltação delicada" loading="lazy"><figcaption class="p-3 text-xs font-semibold text-ink sm:p-4">Elegância natural</figcaption></figure>
+          <figure class="gallery-card reveal overflow-hidden rounded-2xl bg-white shadow-card"><img class="gallery-img aspect-[4/5] w-full object-cover" src="https://images.unsplash.com/photo-1604654894610-df63bc536371?q=80&w=800&auto=format&fit=crop" alt="Detalhe de manicure e esmaltação" loading="lazy"><figcaption class="p-3 text-xs font-semibold text-ink sm:p-4">Acabamento impecável</figcaption></figure>
+          <figure class="gallery-card reveal overflow-hidden rounded-2xl bg-white shadow-card"><img class="gallery-img aspect-[4/5] w-full object-cover" src="https://images.unsplash.com/photo-1610992015732-2449b76344bc?q=80&w=800&auto=format&fit=crop" alt="Inspiração de nail art" loading="lazy"><figcaption class="p-3 text-xs font-semibold text-ink sm:p-4">Nail art delicada</figcaption></figure>
+          <figure class="gallery-card reveal overflow-hidden rounded-2xl bg-white shadow-card"><img class="gallery-img aspect-[4/5] w-full object-cover" src="https://images.unsplash.com/photo-1610992015732-2449b76344bc?q=80&w=800&auto=format&fit=crop" alt="Inspiração de unhas decoradas" loading="lazy"><figcaption class="p-3 text-xs font-semibold text-ink sm:p-4">Detalhes que encantam</figcaption></figure>
+          <figure class="gallery-card reveal overflow-hidden rounded-2xl bg-white shadow-card"><img class="gallery-img aspect-[4/5] w-full object-cover" src="https://images.unsplash.com/photo-1604902396830-aca29e19b067?q=80&w=800&auto=format&fit=crop" alt="Cuidados de beleza para mãos" loading="lazy"><figcaption class="p-3 text-xs font-semibold text-ink sm:p-4">Seu momento de cuidado</figcaption></figure>
+          <figure class="gallery-card reveal overflow-hidden rounded-2xl bg-white shadow-card"><img class="gallery-img aspect-[4/5] w-full object-cover" src="https://images.unsplash.com/photo-1634729372389-4c7f4f8a3d5f?q=80&w=800&auto=format&fit=crop" alt="Inspiração de manicure sofisticada" loading="lazy"><figcaption class="p-3 text-xs font-semibold text-ink sm:p-4">Beleza atemporal</figcaption></figure>
+        </div>
+        <p class="mt-5 text-center text-[10px] text-muted">Imagens ilustrativas de referência visual.</p>
+      </div>
+    </section>
+
+    <section class="py-24 md:py-28">
+      <div class="mx-auto max-w-7xl px-5 lg:px-8">
+        <div class="mx-auto max-w-2xl text-center reveal"><p class="eyebrow text-[10px] font-extrabold text-violet">Nosso compromisso</p><h2 class="mt-4 font-display text-3xl font-extrabold tracking-tight text-ink sm:text-4xl">Seu bem-estar vem <span class="text-violet">em primeiro lugar.</span></h2></div>
+        <div class="mt-14 grid gap-5 md:grid-cols-3">
+          <article class="reveal rounded-3xl border border-purple-100 bg-white p-8 text-center shadow-card"><div class="mx-auto grid h-14 w-14 place-items-center rounded-2xl bg-lilac text-2xl text-plum">✧</div><h3 class="mt-6 font-display text-lg font-bold">Higienização rigorosa</h3><p class="mt-3 text-sm leading-7 text-muted">Instrumentos submetidos aos processos adequados de limpeza, embalagem e esterilização, conforme o protocolo profissional.</p></article>
+          <article class="reveal rounded-3xl border border-purple-100 bg-white p-8 text-center shadow-card"><div class="mx-auto grid h-14 w-14 place-items-center rounded-2xl bg-lilac text-2xl text-plum">♡</div><h3 class="mt-6 font-display text-lg font-bold">Produtos selecionados</h3><p class="mt-3 text-sm leading-7 text-muted">Materiais de qualidade e atenção à composição dos produtos, respeitando sensibilidades informadas pela cliente.</p></article>
+          <article class="reveal rounded-3xl border border-purple-100 bg-white p-8 text-center shadow-card"><div class="mx-auto grid h-14 w-14 place-items-center rounded-2xl bg-lilac text-2xl text-plum">☕</div><h3 class="mt-6 font-display text-lg font-bold">Ambiente acolhedor</h3><p class="mt-3 text-sm leading-7 text-muted">Um espaço pensado para você desacelerar, relaxar e aproveitar seu momento de autocuidado.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section id="avaliacoes" class="bg-white py-24 md:py-28">
+      <div class="mx-auto max-w-7xl px-5 lg:px-8">
+        <div class="mx-auto max-w-2xl text-center reveal"><p class="eyebrow text-[10px] font-extrabold text-violet">Carinho em cada atendimento</p><h2 class="mt-4 font-display text-3xl font-extrabold tracking-tight text-ink sm:text-4xl">Uma experiência feita para <span class="text-violet">você.</span></h2><p class="mt-5 text-sm leading-7 text-muted">O melhor resultado é unir técnica, cuidado e uma experiência agradável do começo ao fim.</p></div>
+        <div class="mt-12 grid gap-5 md:grid-cols-3">
+          <article class="reveal rounded-3xl border border-purple-100 bg-paper p-7"><div class="text-lg tracking-widest text-violet" aria-label="Avaliação ilustrativa">★★★★★</div><p class="mt-5 text-sm leading-7 text-ink">“A esmaltação em gel fica linda e o acabamento é muito delicado. Adorei o cuidado em cada etapa!”</p><div class="mt-7 border-t border-purple-100 pt-5"><p class="text-xs font-bold">Cliente do Studio</p><p class="mt-1 text-[10px] text-muted">Depoimento demonstrativo</p></div></article>
+          <article class="reveal rounded-3xl border border-purple-100 bg-paper p-7"><div class="text-lg tracking-widest text-violet" aria-label="Avaliação ilustrativa">★★★★★</div><p class="mt-5 text-sm leading-7 text-ink">“Ambiente aconchegante, atendimento atencioso e unhas com um resultado maravilhoso.”</p><div class="mt-7 border-t border-purple-100 pt-5"><p class="text-xs font-bold">Cliente do Studio</p><p class="mt-1 text-[10px] text-muted">Depoimento demonstrativo</p></div></article>
+          <article class="reveal rounded-3xl border border-purple-100 bg-paper p-7"><div class="text-lg tracking-widest text-violet" aria-label="Avaliação ilustrativa">★★★★★</div><p class="mt-5 text-sm leading-7 text-ink">“Gostei muito da atenção aos detalhes. Saí me sentindo renovada e já quero voltar!”</p><div class="mt-7 border-t border-purple-100 pt-5"><p class="text-xs font-bold">Cliente do Studio</p><p class="mt-1 text-[10px] text-muted">Depoimento demonstrativo</p></div></article>
+        </div>
+        <p class="mt-6 text-center text-[10px] text-muted">Os depoimentos são exemplos fictícios de apresentação e devem ser substituídos por avaliações autorizadas de clientes reais.</p>
+      </div>
+    </section>
+
+    <section class="px-5 py-20 md:py-24">
+      <div class="relative mx-auto max-w-6xl overflow-hidden rounded-[2rem] bg-[#F3E8FF] px-7 py-16 text-center shadow-soft sm:px-14 md:py-20">
+        <div class="pointer-events-none absolute -right-20 -top-24 h-80 w-80 rounded-full border border-purple-200"></div><div class="pointer-events-none absolute -bottom-36 -left-24 h-96 w-96 rounded-full border border-white"></div>
+        <div class="relative mx-auto max-w-3xl reveal"><p class="eyebrow text-[9px] font-extrabold text-plum">Seu momento está esperando</p><h2 class="mt-5 font-display text-3xl font-extrabold leading-tight tracking-tight text-ink sm:text-4xl md:text-5xl">Os horários da semana são disputados! Garanta o seu antes que esgotem.</h2><p class="mx-auto mt-6 max-w-xl text-sm leading-7 text-muted">Escolha seu serviço e fale diretamente com Isabella para consultar os horários disponíveis.</p><a href="https://wa.me/5511999999999?text=Ol%C3%A1!%20Gostaria%20de%20ver%20os%20hor%C3%A1rios%20dispon%C3%ADveis%20para%20fazer%20as%20unhas." target="_blank" rel="noopener noreferrer" class="btn mt-9 inline-flex items-center justify-center gap-3 rounded-full bg-violet px-9 py-4 text-sm font-extrabold text-white shadow-xl shadow-violet/20">📅 Agendar meu horário <span aria-hidden="true">↗</span></a><p class="mt-5 text-[10px] text-muted">Atendimento mediante agendamento.</p></div>
+      </div>
+    </section>
+
+    <section id="faq" class="py-20 md:py-24">
+      <div class="mx-auto grid max-w-7xl gap-12 px-5 lg:grid-cols-[.75fr_1.25fr] lg:px-8">
+        <div class="reveal"><p class="eyebrow text-[10px] font-extrabold text-violet">Dúvidas frequentes</p><h2 class="mt-4 font-display text-3xl font-extrabold tracking-tight text-ink sm:text-4xl">Tudo pronto para seu <span class="text-violet">agendamento?</span></h2><p class="mt-5 max-w-sm text-sm leading-7 text-muted">Se precisar de mais informações, mande uma mensagem. Vamos ajudar você.</p><a href="https://wa.me/5511999999999?text=Ol%C3%A1%2C%20Isabella!%20Tenho%20uma%20d%C3%BAvida%20sobre%20os%20servi%C3%A7os%20do%20Studio." target="_blank" rel="noopener noreferrer" class="mt-7 inline-flex items-center gap-2 text-sm font-bold text-plum">Fale pelo WhatsApp ↗</a></div>
+        <div class="reveal divide-y divide-purple-100 border-y border-purple-100">
+          <article class="faq-item" aria-expanded="false"><button class="faq-trigger flex w-full items-center justify-between gap-5 py-6 text-left" aria-expanded="false"><span class="font-display text-base font-bold">Onde fica localizado o Studio?</span><span class="faq-plus text-2xl font-light text-violet">+</span></button><div class="faq-panel"><p class="max-w-2xl pb-6 text-sm leading-7 text-muted">O endereço demonstrativo está indicado no rodapé. Confirme o endereço real e as orientações de chegada diretamente pelo WhatsApp antes de publicar o site.</p></div></article>
+          <article class="faq-item" aria-expanded="false"><button class="faq-trigger flex w-full items-center justify-between gap-5 py-6 text-left" aria-expanded="false"><span class="font-display text-base font-bold">Como funciona o pagamento?</span><span class="faq-plus text-2xl font-light text-violet">+</span></button><div class="faq-panel"><p class="max-w-2xl pb-6 text-sm leading-7 text-muted">As formas de pagamento podem ser confirmadas no momento do agendamento. Chame no WhatsApp para consultar as opções aceitas pelo Studio.</p></div></article>
+          <article class="faq-item" aria-expanded="false"><button class="faq-trigger flex w-full items-center justify-between gap-5 py-6 text-left" aria-expanded="false"><span class="font-display text-base font-bold">Quanto tempo dura a esmaltação em gel?</span><span class="faq-plus text-2xl font-light text-violet">+</span></button><div class="faq-panel"><p class="max-w-2xl pb-6 text-sm leading-7 text-muted">A durabilidade pode chegar a cerca de 21 dias, variando conforme crescimento das unhas, rotina e cuidados em casa. A profissional orienta sobre manutenção e remoção segura.</p></div></article>
+          <article class="faq-item" aria-expanded="false"><button class="faq-trigger flex w-full items-center justify-between gap-5 py-6 text-left" aria-expanded="false"><span class="font-display text-base font-bold">Preciso agendar com antecedência?</span><span class="faq-plus text-2xl font-light text-violet">+</span></button><div class="faq-panel"><p class="max-w-2xl pb-6 text-sm leading-7 text-muted">Sim. O atendimento é organizado por horário marcado. Entre em contato para consultar a agenda e reservar seu momento.</p></div></article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="bg-[#30243A] text-white">
+    <div class="mx-auto max-w-7xl px-5 py-14 lg:px-8">
+      <div class="grid gap-10 border-b border-white/10 pb-12 md:grid-cols-[1.2fr_.8fr_.8fr]">
+        <div><a href="#inicio" class="inline-flex items-center gap-3"><span class="grid h-10 w-10 place-items-center rounded-full border border-purple-200/50 bg-white/5 font-display text-xl font-bold text-purple-200">I.</span><span><span class="block font-display text-base font-extrabold">Studio Isabella Martins</span><span class="block text-[9px] uppercase tracking-[.18em] text-white/50">Nail Designer & Cuidados</span></span></a><p class="mt-5 max-w-sm text-xs leading-7 text-white/60">Unhas impecáveis, duradouras e cheias de estilo para realçar sua autoestima.</p></div>
+        <div><p class="eyebrow text-[9px] font-extrabold text-purple-200">Encontre</p><div class="mt-5 flex flex-col gap-3 text-xs text-white/65"><a href="#servicos" class="hover:text-white">Serviços</a><a href="#galeria" class="hover:text-white">Galeria</a><a href="#avaliacoes" class="hover:text-white">Avaliações</a><a href="#faq" class="hover:text-white">Perguntas frequentes</a></div></div>
+        <div><p class="eyebrow text-[9px] font-extrabold text-purple-200">Visite & converse</p><div class="mt-5 flex flex-col gap-3 text-xs leading-6 text-white/65"><span>Rua das Violetas, 125 · Centro</span><span>Osasco · SP · CEP 06000-000</span><span>Segunda a sábado · 9h às 19h</span><a href="https://www.instagram.com/studioisabellamartins/" target="_blank" rel="noopener noreferrer" class="hover:text-white">Instagram · @studioisabellamartins ↗</a><a href="https://wa.me/5511999999999" target="_blank" rel="noopener noreferrer" class="hover:text-white">WhatsApp · (11) 99999-9999</a></div></div>
+      </div>
+      <div class="flex flex-col gap-3 pt-7 text-[10px] leading-6 text-white/40 sm:flex-row sm:items-center sm:justify-between"><p>© <span id="year"></span> Studio Isabella Martins. Todos os direitos reservados.</p><p>Conceito demonstrativo: endereço, contato e perfil social são fictícios.</p></div>
+    </div>
+  </footer>
+
+  <a href="https://wa.me/5511999999999?text=Ol%C3%A1!%20Gostaria%20de%20ver%20os%20hor%C3%A1rios%20dispon%C3%ADveis%20para%20fazer%20as%20unhas." target="_blank" rel="noopener noreferrer" aria-label="Agendar pelo WhatsApp" class="fixed bottom-5 right-5 z-[60] grid h-14 w-14 place-items-center rounded-full bg-[#25D366] text-white shadow-xl shadow-emerald-900/20 transition duration-300 hover:-translate-y-1 hover:scale-105 focus:outline-none focus:ring-4 focus:ring-emerald-200 sm:bottom-7 sm:right-7 sm:h-16 sm:w-16">
+    <svg viewBox="0 0 24 24" class="h-7 w-7 sm:h-8 sm:w-8" fill="currentColor" aria-hidden="true"><path d="M20.5 3.5A11.8 11.8 0 0 0 12.1 0C5.6 0 .3 5.3.3 11.8c0 2.1.6 4.1 1.6 5.9L.2 24l6.5-1.7a11.8 11.8 0 0 0 5.4 1.3h.1c6.5 0 11.8-5.3 11.8-11.8 0-3.1-1.2-6.1-3.5-8.3ZM12.2 21.6a9.8 9.8 0 0 1-5-1.4l-.4-.2-3.9 1 1-3.8-.3-.4a9.7 9.7 0 1 1 8.6 4.8Zm5.3-7.3c-.3-.2-1.8-.9-2.1-1-.3-.1-.5-.2-.7.2-.2.3-.8 1-1 1.2-.2.2-.4.2-.7.1-.3-.2-1.3-.5-2.5-1.6-.9-.8-1.6-1.8-1.8-2.1-.2-.3 0-.5.1-.6l.5-.6c.2-.2.2-.3.3-.5.1-.2 0-.4 0-.6-.1-.2-.7-1.7-.9-2.3-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.6.1-.9.4-.3.3-1.1 1.1-1.1 2.6s1.1 3 1.2 3.2c.2.2 2.2 3.4 5.4 4.8.8.4 1.4.6 1.9.7.8.3 1.5.2 2 .1.6-.1 1.8-.7 2.1-1.4.3-.7.3-1.3.2-1.4-.1-.1-.3-.2-.6-.4Z"/></svg>
+  </a>
+
+  <script>
+    const menuToggle = document.getElementById('menu-toggle');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const menuIcon = document.getElementById('menu-icon');
+    menuToggle.addEventListener('click', () => {
+      const isOpen = menuToggle.getAttribute('aria-expanded') === 'true';
+      menuToggle.setAttribute('aria-expanded', String(!isOpen));
+      menuToggle.setAttribute('aria-label', isOpen ? 'Abrir menu' : 'Fechar menu');
+      mobileMenu.classList.toggle('hidden', isOpen);
+      menuIcon.innerHTML = isOpen
+        ? '<path stroke-linecap="round" d="M4 7h16M4 12h16M4 17h16"/>'
+        : '<path stroke-linecap="round" d="m6 6 12 12M18 6 6 18"/>';
+    });
+    document.querySelectorAll('.mobile-link').forEach(link => link.addEventListener('click', () => {
+      mobileMenu.classList.add('hidden');
+      menuToggle.setAttribute('aria-expanded', 'false');
+      menuToggle.setAttribute('aria-label', 'Abrir menu');
+      menuIcon.innerHTML = '<path stroke-linecap="round" d="M4 7h16M4 12h16M4 17h16"/>';
+    }));
+    document.querySelectorAll('.faq-trigger').forEach(trigger => {
+      trigger.addEventListener('click', () => {
+        const item = trigger.closest('.faq-item');
+        const shouldOpen = item.getAttribute('aria-expanded') !== 'true';
+        document.querySelectorAll('.faq-item').forEach(other => {
+          other.setAttribute('aria-expanded', 'false');
+          other.querySelector('.faq-trigger').setAttribute('aria-expanded', 'false');
+        });
+        item.setAttribute('aria-expanded', String(shouldOpen));
+        trigger.setAttribute('aria-expanded', String(shouldOpen));
+      });
+    });
+    const revealItems = document.querySelectorAll('.reveal');
+    if ('IntersectionObserver' in window) {
+      const observer = new IntersectionObserver((entries, obs) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            obs.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.12 });
+      revealItems.forEach(item => observer.observe(item));
+    } else {
+      revealItems.forEach(item => item.classList.add('visible'));
+    }
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
